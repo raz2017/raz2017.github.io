@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — About Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <p class="loader-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main" class="hidden">
+
+    <header>
+      <nav>
+        <span class="nav-logo">YN</span>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">Your Name</h1>
+        <p class="hero-role">Software Developer &amp; Designer</p>
+        <a href="#about" class="btn">Learn More</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-photo">
+            <!-- Replace src with your photo -->
+            <div class="photo-placeholder">Photo</div>
+          </div>
+          <div class="about-text">
+            <p>
+              Write a short introduction about yourself here. Who are you, what do
+              you do, and what drives you? Keep it genuine and concise.
+            </p>
+            <p>
+              A second paragraph can cover your background, education, or what
+              you're currently working on.
+            </p>
+            <a href="#" class="btn btn-outline" download>Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">HTML &amp; CSS</div>
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">React</div>
+          <div class="skill-card">Node.js</div>
+          <div class="skill-card">Python</div>
+          <div class="skill-card">SQL</div>
+          <!-- Add or remove skill cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Project Title</h3>
+            <p>Short description of what this project does and the technologies used.</p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm">Live</a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Project Title</h3>
+            <p>Short description of what this project does and the technologies used.</p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm">Live</a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Project Title</h3>
+            <p>Short description of what this project does and the technologies used.</p>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm">Live</a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-sub">Have a question or want to work together? Reach out.</p>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
+
+  </div><!-- /#main -->
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const main   = document.getElementById('main');
+
+      // Minimum display time so the animation is visible
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+        loader.addEventListener('transitionend', () => {
+          loader.style.display = 'none';
+          main.classList.remove('hidden');
+          main.classList.add('fade-in');
+        });
+      }, 800);
+    });
+  </script>
+
+</body>
+</html>
