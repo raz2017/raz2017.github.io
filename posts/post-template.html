@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post Title — Raziel Melchor</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .post-page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 6rem;
+    }
+
+    .post-back {
+      display: inline-block;
+      color: var(--color-muted);
+      font-size: 0.85rem;
+      margin-bottom: 2.5rem;
+      transition: color var(--transition);
+    }
+
+    .post-back:hover {
+      color: var(--color-text);
+    }
+
+    .post-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .post-tag {
+      color: var(--color-accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .post-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    .post-meta {
+      color: var(--color-muted);
+      font-size: 0.85rem;
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .post-divider {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: 2rem 0;
+    }
+
+    /* Typography for post body */
+    .post-body {
+      color: #ccc;
+      font-size: 1.05rem;
+      line-height: 1.85;
+    }
+
+    .post-body h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin: 2.5rem 0 1rem;
+    }
+
+    .post-body h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin: 2rem 0 0.75rem;
+    }
+
+    .post-body p {
+      margin-bottom: 1.25rem;
+    }
+
+    .post-body a {
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .post-body ul,
+    .post-body ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .post-body li {
+      margin-bottom: 0.4rem;
+    }
+
+    .post-body code {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 0.15em 0.45em;
+      font-size: 0.88em;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      color: var(--color-accent);
+    }
+
+    .post-body pre {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin-bottom: 1.25rem;
+    }
+
+    .post-body pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 0.9rem;
+      color: var(--color-text);
+    }
+
+    .post-body blockquote {
+      border-left: 3px solid var(--color-accent);
+      padding-left: 1.25rem;
+      color: var(--color-muted);
+      font-style: italic;
+      margin: 1.5rem 0;
+    }
+
+    /* Post footer nav */
+    .post-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.85rem;
+      gap: 1rem;
+    }
+
+    .post-nav a {
+      color: var(--color-muted);
+      transition: color var(--transition);
+      max-width: 45%;
+    }
+
+    .post-nav a:hover {
+      color: var(--color-accent);
+    }
+
+    .post-nav .next {
+      text-align: right;
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <p class="loader-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main" class="hidden">
+
+    <header>
+      <nav>
+        <a href="../index.html" class="nav-logo">RM</a>
+        <ul>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../blog.html" style="color: var(--color-text);">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <article class="post-page">
+
+      <a href="../blog.html" class="post-back">← Back to Blog</a>
+
+      <header class="post-header">
+        <span class="post-tag">Engineering</span>
+        <h1 class="post-title">Post Title Goes Here</h1>
+        <div class="post-meta">
+          <span>March 9, 2026</span>
+          <span>5 min read</span>
+        </div>
+      </header>
+
+      <hr class="post-divider" />
+
+      <!-- POST BODY — write your content below -->
+      <div class="post-body">
+
+        <p>
+          Start with a hook. What problem are you addressing, or what idea are you
+          exploring? Give the reader a reason to keep going.
+        </p>
+
+        <h2>A Section Heading</h2>
+
+        <p>
+          Expand on your first point here. Keep paragraphs short — two to four
+          sentences is usually ideal for readability on screen.
+        </p>
+
+        <p>
+          You can reference inline <code>code snippets</code> like this, or drop
+          in a full code block below.
+        </p>
+
+        <pre><code>function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet('World'));</code></pre>
+
+        <h2>Another Section</h2>
+
+        <p>Use lists to break down steps or key points:</p>
+
+        <ul>
+          <li>First point</li>
+          <li>Second point</li>
+          <li>Third point</li>
+        </ul>
+
+        <blockquote>
+          A quote or callout you want to highlight can go here.
+        </blockquote>
+
+        <h3>A Subsection</h3>
+
+        <p>
+          Continue with more detail. Link to relevant resources using
+          <a href="#">anchor text like this</a>.
+        </p>
+
+        <h2>Wrapping Up</h2>
+
+        <p>
+          Close with a summary or takeaway. What should the reader walk away
+          knowing or doing differently?
+        </p>
+
+      </div>
+      <!-- /POST BODY -->
+
+      <!-- Previous / Next post navigation -->
+      <nav class="post-nav">
+        <a href="#" class="prev">← Previous Post Title</a>
+        <a href="#" class="next">Next Post Title →</a>
+      </nav>
+
+    </article>
+
+    <footer>
+      <p>&copy; 2026 Raziel Melchor. All rights reserved.</p>
+    </footer>
+
+  </div><!-- /#main -->
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const main   = document.getElementById('main');
+
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+        loader.addEventListener('transitionend', () => {
+          loader.style.display = 'none';
+          main.classList.remove('hidden');
+          main.classList.add('fade-in');
+        });
+      }, 800);
+    });
+  </script>
+
+</body>
+</html>

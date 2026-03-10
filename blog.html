@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Raziel Melchor</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Blog-specific styles */
+    .blog-hero {
+      padding: 6rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    .blog-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-hero p {
+      color: var(--color-muted);
+    }
+
+    .blog-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2rem 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .post-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .post-card:hover {
+      border-color: var(--color-accent);
+      transform: translateY(-3px);
+    }
+
+    .post-meta {
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      display: flex;
+      gap: 1rem;
+    }
+
+    .post-tag {
+      color: var(--color-accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .post-card h2 {
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    .post-card p {
+      color: var(--color-muted);
+      font-size: 0.9rem;
+      flex: 1;
+    }
+
+    .post-card a.read-more {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-top: 0.5rem;
+      display: inline-block;
+      transition: opacity var(--transition);
+    }
+
+    .post-card a.read-more:hover {
+      opacity: 0.75;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <p class="loader-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div id="main" class="hidden">
+
+    <header>
+      <nav>
+        <a href="index.html" class="nav-logo">RM</a>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="blog.html" style="color: var(--color-text);">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- BLOG HERO -->
+    <div class="blog-hero">
+      <h1>Blog</h1>
+      <p>Thoughts on software, engineering, and whatever else is on my mind.</p>
+    </div>
+
+    <!-- POSTS GRID -->
+    <div class="blog-grid">
+
+      <!-- Post 1 -->
+      <article class="post-card">
+        <span class="post-tag">Engineering</span>
+        <div class="post-meta">
+          <span>March 9, 2026</span>
+          <span>5 min read</span>
+        </div>
+        <h2>Post Title Goes Here</h2>
+        <p>A short excerpt or summary of the post. Give the reader just enough to know whether they want to read more.</p>
+        <a href="posts/post-template.html" class="read-more">Read more →</a>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="post-card">
+        <span class="post-tag">Career</span>
+        <div class="post-meta">
+          <span>February 20, 2026</span>
+          <span>3 min read</span>
+        </div>
+        <h2>Post Title Goes Here</h2>
+        <p>A short excerpt or summary of the post. Give the reader just enough to know whether they want to read more.</p>
+        <a href="#" class="read-more">Read more →</a>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="post-card">
+        <span class="post-tag">Projects</span>
+        <div class="post-meta">
+          <span>January 14, 2026</span>
+          <span>7 min read</span>
+        </div>
+        <h2>Post Title Goes Here</h2>
+        <p>A short excerpt or summary of the post. Give the reader just enough to know whether they want to read more.</p>
+        <a href="#" class="read-more">Read more →</a>
+      </article>
+
+      <!-- Duplicate or remove cards as needed -->
+
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Raziel Melchor. All rights reserved.</p>
+    </footer>
+
+  </div><!-- /#main -->
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      const main   = document.getElementById('main');
+
+      setTimeout(() => {
+        loader.classList.add('fade-out');
+        loader.addEventListener('transitionend', () => {
+          loader.style.display = 'none';
+          main.classList.remove('hidden');
+          main.classList.add('fade-in');
+        });
+      }, 800);
+    });
+  </script>
+
+</body>
+</html>
