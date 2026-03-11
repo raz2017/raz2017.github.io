@@ -276,14 +276,12 @@ console.log(greet('World'));</code></pre>
       const loader = document.getElementById('loader');
       const main   = document.getElementById('main');
 
-      setTimeout(() => {
-        loader.classList.add('fade-out');
-        loader.addEventListener('transitionend', () => {
-          loader.style.display = 'none';
-          main.classList.remove('hidden');
-          main.classList.add('fade-in');
-        });
-      }, 800);
+      loader.classList.add('fade-out');
+      loader.addEventListener('transitionend', () => {
+        loader.style.display = 'none';
+        main.classList.remove('hidden');
+        main.classList.add('fade-in');
+      });
     });
   </script>
 
