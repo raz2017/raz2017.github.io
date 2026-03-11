@@ -148,16 +148,13 @@
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       };
 
-      // Minimum display time so the animation is visible
-      setTimeout(() => {
-        loader.classList.add('fade-out');
-        loader.addEventListener('transitionend', () => {
-          loader.style.display = 'none';
-          main.classList.remove('hidden');
-          main.classList.add('fade-in');
-          scrollToHashTarget();
-        });
-      }, 800);
+      loader.classList.add('fade-out');
+      loader.addEventListener('transitionend', () => {
+        loader.style.display = 'none';
+        main.classList.remove('hidden');
+        main.classList.add('fade-in');
+        scrollToHashTarget();
+      });
     });
   </script>
 
