@@ -139,6 +139,14 @@
     window.addEventListener('load', () => {
       const loader = document.getElementById('loader');
       const main   = document.getElementById('main');
+      const scrollToHashTarget = () => {
+        if (!window.location.hash) return;
+
+        const target = document.querySelector(window.location.hash);
+        if (!target) return;
+
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
 
       // Minimum display time so the animation is visible
       setTimeout(() => {
@@ -147,6 +155,7 @@
           loader.style.display = 'none';
           main.classList.remove('hidden');
           main.classList.add('fade-in');
+          scrollToHashTarget();
         });
       }, 800);
     });
